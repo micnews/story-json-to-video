@@ -1,0 +1,15 @@
+{
+  "name": "story-json-to-video",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*-test.js"
+  },
+  "author": "Mic Network Inc.",
+  "license": "MIT",
+  "dependencies": {
+    "canvas": "^2.0.0-alpha.9",
+    "tape": "^4.8.0"
+  }
+}
