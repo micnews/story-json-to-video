@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "tape test/*-test.js"
+    "lint": "eslint .",
+    "test": "tape test/*-test.js && npm run lint"
   },
   "author": "Mic Network Inc.",
   "license": "MIT",
@@ -14,5 +15,16 @@
     "split": "^1.0.1",
     "tape": "^4.8.0",
     "yoga-layout": "^1.9.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-config-mic": "^1.0.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-flowtype": "^2.43.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.10.3"
   }
 }

@@ -15,5 +15,4 @@ if (!args[0]) {
 
 const json = JSON.parse(fs.readFileSync(args[0], 'utf8'));
 
-articleJsonToVideo(json)
-  .catch(err => console.log(err));
+articleJsonToVideo(json).catch(err => console.log(err));

@@ -10,7 +10,7 @@ test('single png stream', (t) => {
   split(s, buf => bufs.push([...buf]), () => {
     t.deepEqual(bufs, [[137, 80, 78, 71, 13, 10, 26, 10, 1, 2, 3]]);
     t.end();
-  });
+  }, t.end.bind(t));
 });
 
 test('2 pngs stream', (t) => {
@@ -22,10 +22,10 @@ test('2 pngs stream', (t) => {
   split(s, buf => bufs.push([...buf]), () => {
     t.deepEqual(bufs, [
       [137, 80, 78, 71, 13, 10, 26, 10, 1, 2, 3],
-      [137, 80, 78, 71, 13, 10, 26, 10, 4, 5, 6]
+      [137, 80, 78, 71, 13, 10, 26, 10, 4, 5, 6],
     ]);
     t.end();
-  });
+  }, t.end.bind(t));
 });
 
 test('unmatched sequence', (t) => {
@@ -36,10 +36,10 @@ test('unmatched sequence', (t) => {
   const bufs = [];
   split(s, buf => bufs.push([...buf]), () => {
     t.deepEqual(bufs, [
-      [137, 80, 78, 71, 13, 10, 26, 10, 1, 2, 3, 137, 80, 78, 71, 4, 5, 6]
+      [137, 80, 78, 71, 13, 10, 26, 10, 1, 2, 3, 137, 80, 78, 71, 4, 5, 6],
     ]);
     t.end();
-  });
+  }, t.end.bind(t));
 });
 
 test('unmatched sequence in the second png', (t) => {
@@ -52,10 +52,10 @@ test('unmatched sequence in the second png', (t) => {
   split(s, buf => bufs.push([...buf]), () => {
     t.deepEqual(bufs, [
       [137, 80, 78, 71, 13, 10, 26, 10, 7, 6, 5],
-      [137, 80, 78, 71, 13, 10, 26, 10, 1, 2, 3, 137, 80, 78, 71, 4, 5, 6]
+      [137, 80, 78, 71, 13, 10, 26, 10, 1, 2, 3, 137, 80, 78, 71, 4, 5, 6],
     ]);
     t.end();
-  });
+  }, t.end.bind(t));
 });
 
 test('single non matching byte', (t) => {
@@ -67,10 +67,10 @@ test('single non matching byte', (t) => {
   split(s, buf => bufs.push([...buf]), () => {
     t.deepEqual(bufs, [
       [137, 80, 78, 71, 13, 10, 26, 10, 137, 137, 137],
-      [137, 80, 78, 71, 13, 10, 26, 10, 137, 137, 137]
+      [137, 80, 78, 71, 13, 10, 26, 10, 137, 137, 137],
     ]);
     t.end();
-  });
+  }, t.end.bind(t));
 });
 
 test('two non matching bytes', (t) => {
@@ -82,10 +82,10 @@ test('two non matching bytes', (t) => {
   split(s, buf => bufs.push([...buf]), () => {
     t.deepEqual(bufs, [
       [137, 80, 78, 71, 13, 10, 26, 10, 137, 80, 137, 80],
-      [137, 80, 78, 71, 13, 10, 26, 10, 137, 80, 137, 80]
+      [137, 80, 78, 71, 13, 10, 26, 10, 137, 80, 137, 80],
     ]);
     t.end();
-  });
+  }, t.end.bind(t));
 });
 
 test('three non matching bytes', (t) => {
@@ -97,10 +97,10 @@ test('three non matching bytes', (t) => {
   split(s, buf => bufs.push([...buf]), () => {
     t.deepEqual(bufs, [
       [137, 80, 78, 71, 13, 10, 26, 10, 137, 80, 78, 137, 80, 78],
-      [137, 80, 78, 71, 13, 10, 26, 10, 137, 80, 78, 137, 80, 78]
+      [137, 80, 78, 71, 13, 10, 26, 10, 137, 80, 78, 137, 80, 78],
     ]);
     t.end();
-  });
+  }, t.end.bind(t));
 });
 
 test('ending with the sequence', (t) => {
@@ -111,8 +111,8 @@ test('ending with the sequence', (t) => {
   const bufs = [];
   split(s, buf => bufs.push([...buf]), () => {
     t.deepEqual(bufs, [
-      [137, 80, 78, 71, 13, 10, 26, 10, 137, 80, 78, 137, 80, 78]
+      [137, 80, 78, 71, 13, 10, 26, 10, 137, 80, 78, 137, 80, 78],
     ]);
     t.end();
-  });
+  }, t.end.bind(t));
 });
