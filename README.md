@@ -1,6 +1,6 @@
 # story-json-to-video
 
-Compile `story-json` documents into videos. This allows stories to be displayed on platforms that do not support "tap-to-advance" user interaction.
+Compile `story-json` documents into videos. This allows stories to be displayed on platforms that do not support "tap-through" user interaction.
 
 Not all features of `story-json` format are supported at the moment, open an issue if you need something that isn't supported yet. PRs are always welcome too.
 
