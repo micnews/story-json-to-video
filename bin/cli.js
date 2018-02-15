@@ -2,7 +2,7 @@
 
 const argv = require('minimist')(process.argv.slice(2), {
   string: ['font', 'pages'],
-  boolean: ['print-ffmpeg', 'save-poster-images', 'poster-images'],
+  boolean: ['print-ffmpeg', 'save-poster-images', 'poster-images', 'no-concat'],
 });
 const fs = require('fs');
 const { multirange } = require('multi-integer-range');
@@ -25,11 +25,12 @@ function usage() {
   console.log('USAGE: article-json-to-video [options] <story.json>');
   console.log('');
   console.log('OPTIONS:');
-  console.log('  --font <family>=<file>    Use custom font from the file');
-  console.log('  --pages                   List of pages to include (e.g. "1-2,4,6-"), defaults to all');
-  console.log('  --poster-images           Only save first frame of each page as image');
-  console.log('  --print-ffmpeg            Print ffmpeg output');
-  console.log('  --save-poster-images      Save first frame of each page as image');
+  console.log('  --font <family>=<file>   Use custom font from the file');
+  console.log('  --no-concat              Do not concatenate per-page videos into resulting video');
+  console.log('  --pages                  List of pages to include (e.g. "1-2,4,6-"), defaults to all');
+  console.log('  --poster-images          Only save first frame of each page as image');
+  console.log('  --print-ffmpeg           Print ffmpeg output');
+  console.log('  --save-poster-images     Save first frame of each page as image');
   process.exit(1);
 }
 
@@ -68,6 +69,7 @@ articleJsonToVideo(json, {
   printFfmpeg: argv['print-ffmpeg'],
   savePosterImages: argv['save-poster-images'],
   posterImages: argv['poster-images'],
+  noConcat: argv.concat === false,
   pagesRange,
   outputName,
 }).catch(err => console.error('Unexpected error', err));
