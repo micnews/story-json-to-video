@@ -26,6 +26,7 @@ function usage() {
   console.log('');
   console.log('OPTIONS:');
   console.log('  --font <family>=<file>   Use custom font from the file');
+  console.log('  --help                   Show this message');
   console.log('  --no-concat              Do not concatenate per-page videos into resulting video');
   console.log('  --pages                  List of pages to include (e.g. "1-2,4,6-"), defaults to all');
   console.log('  --poster-images          Only save first frame of each page as image');
