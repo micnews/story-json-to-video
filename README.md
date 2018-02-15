@@ -1,16 +1,21 @@
 # story-json-to-video
 
-Compile story-json documents into videos. This allows stories to be displayed on platforms that do not support "tap-to-advance" user interaction.
+Compile `story-json` documents into videos. This allows stories to be displayed on platforms that do not support "tap-to-advance" user interaction.
+
+Not all features of `story-json` format are supported at the moment, open an issue if you need something that isn't supported yet. PRs are always welcome too.
 
 ## Installation
 
 This package requires [node.js](https://nodejs.org), version 8 or later.
+
+This package uses `ffmpeg` to process videos, which need to be installed and in `PATH` directory.
 
 This package depends on [node-canvas](https://github.com/Automattic/node-canvas), which requires Cairo, Pango, libpng, libjpeg, giflib and librsvg to be installed on the system. librsvg is optional for svg rendering. See https://github.com/Automattic/node-canvas#installation.
 
 Example for macOS:
 
 ```
+brew install ffmpeg
 brew install pkg-config cairo pango libpng jpeg giflib librsvg
 PKG_CONFIG_PATH=/usr/local/opt/zlib/lib/pkgconfig npm install story-json-to-video -g
 ```
