@@ -12,6 +12,7 @@
   "dependencies": {
     "canvas": "^2.0.0-alpha.9",
     "got": "^8.0.3",
+    "minimist": "^1.2.0",
     "split": "^1.0.1",
     "tape": "^4.8.0",
     "yoga-layout": "^1.9.0"
