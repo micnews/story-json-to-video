@@ -1,11 +1,14 @@
 {
   "name": "story-json-to-video",
   "version": "0.0.0",
-  "description": "",
+  "description": "Compile story-json documents into videos",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
     "test": "tape test/*-test.js && npm run lint"
+  },
+  "bin": {
+    "story-json-to-video": "./bin/cli.js"
   },
   "author": "Mic Network Inc.",
   "license": "MIT",
@@ -13,6 +16,7 @@
     "canvas": "^2.0.0-alpha.9",
     "got": "^8.0.3",
     "minimist": "^1.2.0",
+    "multi-integer-range": "^4.0.4",
     "split": "^1.0.1",
     "tape": "^4.8.0",
     "yoga-layout": "^1.9.0"
