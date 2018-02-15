@@ -6,7 +6,7 @@ Compile story-json documents into videos. This allows stories to be displayed on
 
 This package requires [node.js](https://nodejs.org), version 8 or later.
 
-This package depends on [node-canvas](https://github.com/Automattic/node-canvas), which requires Cairo, Pango and librsvg to be installed on the system. librsvg is optional for svg rendering. See https://github.com/Automattic/node-canvas#installation.
+This package depends on [node-canvas](https://github.com/Automattic/node-canvas), which requires Cairo, Pango, libpng, libjpeg, giflib and librsvg to be installed on the system. librsvg is optional for svg rendering. See https://github.com/Automattic/node-canvas#installation.
 
 Example for macOS:
 
