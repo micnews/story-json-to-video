@@ -1,6 +1,10 @@
-Compile story-json documents into videos.
+# story-json-to-video
+
+Compile story-json documents into videos. This allows stories to be displayed on platforms that do not support "tap-to-advance" user interaction.
 
 ## Installation
+
+This package requires [node.js](https://nodejs.org), version 8 or later.
 
 This package depends on [node-canvas](https://github.com/Automattic/node-canvas), which requires Cairo, Pango and librsvg to be installed on the system. librsvg is optional for svg rendering. See https://github.com/Automattic/node-canvas#installation.
 
@@ -19,9 +23,13 @@ npm config set yoga-layout:platform node -g
 
 ## Usage
 
+To compile `story.json` input file into video run:
+
 ```
 story-json-to-video story.json
 ```
+
+If everything is good, program will create resulting `story.mp4` in the same directory.
 
 To list additional options:
 
@@ -29,7 +37,7 @@ To list additional options:
 story-json-to-video --help
 ```
 
-If everything is good, script will create resulting `story.mp4` in the same directory.
+
 
 
 ## Custom fonts
