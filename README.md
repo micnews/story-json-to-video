@@ -47,7 +47,9 @@ story-json-to-video --help
 
 ## Custom fonts
 
-Use `--font` option to provide custom fonts, e.g. `--font MyFont=./my-font.otf`. This uses [registerFont](https://github.com/Automattic/node-canvas#registerfont-for-bundled-fonts) from `node-canvas`.
+Use `--font` option to provide custom fonts, e.g. `--font MyFont=./my-font.otf`.
+
+This uses [registerFont](https://github.com/Automattic/node-canvas#registerfont-for-bundled-fonts) from `node-canvas`.
 
 ## License
 
