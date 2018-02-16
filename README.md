@@ -4,6 +4,8 @@ Compile `story-json` documents into videos. This allows stories to be displayed 
 
 Not all features of `story-json` format are supported at the moment, open an issue if you need something that isn't supported yet. PRs are always welcome too.
 
+<img src="https://user-images.githubusercontent.com/6034700/36316418-40c3cc3e-1308-11e8-98e9-27f98247cfa4.gif" width="200">
+
 ## Installation
 
 This package requires [node.js](https://nodejs.org), version 8 or later.
