@@ -28,6 +28,8 @@ This package also depends on [yoga](https://github.com/facebook/yoga), targeting
 npm config set yoga-layout:platform node -g
 ```
 
+*Remove `-g` from the commands if you're cloning and installing this module locally.*
+
 ## Usage
 
 To compile `story.json` into video, run:
