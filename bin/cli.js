@@ -23,7 +23,7 @@ const fonts = fontOpts.map((fontStr) => {
 });
 
 function usage() {
-  console.log('USAGE: article-json-to-video [options] <story.json>');
+  console.log('USAGE: story-json-to-video [options] <story.json>');
   console.log('');
   console.log('OPTIONS:');
   console.log('  --font <family>=<file>   Use custom font from the file');
