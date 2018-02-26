@@ -32,6 +32,7 @@ function usage() {
   console.log('  --no-download-assets     Reuse existing pre-downloaded assets (<story>-image-asset-<name>, <story>-media-<page>.mp4) from the previous run');
   console.log('  --pages                  List of pages to include (e.g. "1-2,4,6-"), defaults to all');
   console.log('  --poster-images          Only save first frame of each page as image');
+  console.log('  --print-layout           Print generated Flexbox layout tree');
   console.log('  --print-ffmpeg           Print ffmpeg output');
   console.log('  --save-poster-images     Save first frame of each page as image');
   process.exit(1);
@@ -74,6 +75,7 @@ articleJsonToVideo(json, {
   posterImages: argv['poster-images'],
   noConcat: argv.concat === false,
   noDownloadAssets: argv['download-assets'] === false,
+  printLayout: argv['print-layout'],
   pagesRange,
   outputName,
 }).catch(err => console.error('Unexpected error', err));
