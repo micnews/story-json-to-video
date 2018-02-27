@@ -1,6 +1,6 @@
 {
   "name": "story-json-to-video",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Compile story-json documents into videos",
   "main": "index.js",
   "scripts": {
